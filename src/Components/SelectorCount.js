@@ -6,7 +6,7 @@ import { countInputState, countState, inputState } from "../Recoil/Atom/count";
 const SelectorCount = () => {
   const [count, setCount] = useRecoilState(countState); // useRecoilState 을 통한 value, setter 반환
   const [input, setInput] = useRecoilState(inputState); // useRecoilState 을 통한 value, setter 반환
-  const countInput = useRecoilValue(countInputState); // useRecoilValue 을 통한 selector 의 get value 반환
+  const [countInput, setCountInput] = useRecoilState(countInputState); // useRecoilState 을 통한 value, setter 반환
 
   return (
     <div className="SelectorCount__Container">
@@ -19,6 +19,9 @@ const SelectorCount = () => {
       </button>
       <button className="Button__Five" onClick={() => setCount(count - 1)}>
         숫자 감소
+      </button>
+      <button className="Button__Three" onClick={() => setCountInput("1234")}>
+        selector 값 1234로 변경
       </button>
     </div>
   );
