@@ -1,14 +1,14 @@
 import "./App.css";
-import CharacterSelector from "./Components/CharacterSelector";
-import Character from "./Components/Character";
 import { RecoilRoot } from "recoil";
+import ReadOnlyCount from "./Components/ReadOnlyCount";
+import ReadWriteCount from "./Components/ReadWriteCount";
 
 function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        <CharacterSelector />
-        <Character />
+        <ReadOnlyCount />
+        <ReadWriteCount />
       </div>
     </RecoilRoot>
   );
